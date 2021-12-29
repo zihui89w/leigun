@@ -98,14 +98,14 @@
 static const usb_device_descriptor dev_descr_tmpl = {
 	0x12,			/* uint8_t  bLength;                            */
 	USB_DT_DEVICE,
-	BYTE_HToLe16(0x0200),	/* le16 bcdUSB Version 1.1                      */
+	/*BYTE_HToLe16(0x0200)*/0x0200,	/* le16 bcdUSB Version 1.1                      */
 	0x00,			/* Class code defined at interface level        */
 	0x00,			/* SubClass;                                    */
 	0x00,			/* DeviceProtocol                               */
 	0x08,			/* MaxPacketSize0                               */
-	BYTE_HToLe16(0x03f0),	/* idVendor Hewlett Packard                     */
-	BYTE_HToLe16(0x1312),	/* le16 idProduct                               */
-	BYTE_HToLe16(0x0100),	/* le16 bcdDevice                               */
+	/*BYTE_HToLe16(0x03f0)*/0x03f0,	/* idVendor Hewlett Packard                     */
+	/*BYTE_HToLe16(0x1312)*/0x1312,	/* le16 idProduct                               */
+	/*BYTE_HToLe16(0x0100)*/0x0100,	/* le16 bcdDevice                               */
 	0x01,			/* uint8_t  iManufacturer;                      */
 	0x02,			/* uint8_t  iProduct;                           */
 	0x03,			/* uint8_t  iSerialNumber;                      */
@@ -115,7 +115,7 @@ static const usb_device_descriptor dev_descr_tmpl = {
 static const usb_config_descriptor conf_descr_tmpl = {
 	0x09,			/* uint8_t  bLength; */
 	USB_DT_CONFIG,		/* uint8_t  bDescriptorType;                            */
-	BYTE_HToLe16(0x0009),	/* le16 TotalLength will be patched later               */
+	/*BYTE_HToLe16(0x0009)*/0x0009,	/* le16 TotalLength will be patched later               */
 	0x01,			/* uint8_t  bNumInterfaces;                             */
 	0x01,			/* uint8_t  bConfigurationValue;                        */
 	0x00,			/* uint8_t  iConfiguration; (starts with 1)             */
